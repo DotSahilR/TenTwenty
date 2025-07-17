@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# ⏱️ Timesheet Management App
 
-## Project info
+A simple timesheet management app built using React and TailwindCSS.
 
-**URL**: https://lovable.dev/projects/f6c0da81-4fee-4686-b6ee-25b9983734a4
+## 🛠️ Tech Stack
 
-## How can I edit this code?
+- **React** (Vite + TypeScript)
+- **TailwindCSS** (utility-first CSS)
+- **React Router** (client-side routing)
+- **Lucide-react** (icons)
+- **Context API** (for auth)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 📄 Pages & Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f6c0da81-4fee-4686-b6ee-25b9983734a4) and start prompting.
+### 🔐 `/login`
+- Email + password inputs
+- Dummy authentication logic
+- Stores token in `sessionStorage`
+- On success, redirects to `/timesheet-table`
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📊 `/timesheet-table`
+- Dashboard displaying a table of timesheet entries
+- Table columns:
+  - Week 
+  - Date
+  - Status
+  - Actions (e.g. Edit)
+- Protected route (redirects if not logged in)
 
-**Use your preferred IDE**
+### ✏️ `/timesheet-modal`
+- Modal/form to add or edit a timesheet entry\
+- Accessible via action buttons in table
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧩Dummy authentication ID
 
-Follow these steps:
+- email: test@tentwenty.com
+- password: 123456
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 How to Run
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# 1. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 2. Start development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+# 3. Build for production
+npm run build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f6c0da81-4fee-4686-b6ee-25b9983734a4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# 4. Deploy to GitHub Pages
+npm run deploy
