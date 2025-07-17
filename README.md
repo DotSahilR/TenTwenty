@@ -50,9 +50,3 @@ npm install
 
 # 2. Start development server
 npm run dev
-
-# 3. Build for production
-npm run build
-
-# 4. Deploy to GitHub Pages
-npm run deploy
